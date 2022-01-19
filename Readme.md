@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Evgenii Anisimov](https://up.htmlacademy.ru/htmlcss/33/user/1770543).
-* Наставник: `Неизвестно`.
+* Наставник: [Павел Нюкало](https://htmlacademy.ru/profile/nyukalopavel).
 
 ---
 
