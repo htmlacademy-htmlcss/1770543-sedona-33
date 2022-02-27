@@ -423,15 +423,15 @@ body {
 }
 
 .housing-advantages-item {
-  background-image: url("/images/advantages/housing.svg");
+  background-image: url("../images/advantages/housing.svg");
 }
 
 .eating-advantages-item {
-  background-image: url("/images/advantages/eating.svg");
+  background-image: url("../images/advantages/eating.svg");
 }
 
 .souvenir-advantages-item {
-  background-image: url("/images/advantages/souvenir.svg");
+  background-image: url("../images/advantages/souvenir.svg");
 }
 
 .advantages-sublist .advantages-title {
