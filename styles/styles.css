@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   background: #ffffff;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -83,11 +83,22 @@ body {
 }
 
 .button-blue {
+  padding: 18px 35px;
   background-color: #83b3d3;
 }
 
-.button-green {
-  background-color: #7db54f;
+.button-blue:hover {
+  background-color: #68A2CA;
+}
+
+.button-blue:focus {
+  outline: 3px solid #FFFFFF;
+  border-radius: 4px;
+}
+
+.button-blue:active {
+  color:rgba(255, 255, 255, 0.3);
+  background-color: #68A2CA;
 }
 
 .button-link {
@@ -98,6 +109,32 @@ body {
   background-color: transparent;
 
   text-transform: none;
+}
+
+.button-link:hover .button-link-title {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.button-link:hover {
+  background-color: transparent;
+}
+
+.button-link:focus .button-link-title {
+  color: #FFFFFF;
+}
+
+.button-link:focus {
+  outline: 3px solid #83B3D3;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.button-link:active .button-link-title {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.button-green {
+  color: rgba(255, 255, 255, 0.6)
 }
 
 .navigation {
@@ -167,17 +204,12 @@ body {
 
 .navigation-link-current::before {
   position: absolute;
-  position: absolute;
-  right: 17px;
   right: 20px;
-  bottom: 1px;
   bottom: 0;
-  left: 17px;
   left: 20px;
   z-index: 2;
 
   display: flex;
-  height: 2px;
   height: 4px;
 
   background-color: #756257;
@@ -257,7 +289,6 @@ body {
   background-color: #b7ccdf;
 
   padding-top: 51px;
-  padding-bottom: 82px;
   margin-bottom: 63px;
   background-image: url("../images/divider.svg"), url("../images/bg-1.jpg");
   background-position: bottom left, top left;
@@ -386,22 +417,21 @@ body {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
-.housing-advantages-item {
-  background-image: url("/images/advantages/housing.svg");
+.advantages-item {
   background-repeat: no-repeat;
   background-position: center 89px;
+}
+
+.housing-advantages-item {
+  background-image: url("/images/advantages/housing.svg");
 }
 
 .eating-advantages-item {
   background-image: url("/images/advantages/eating.svg");
-  background-repeat: no-repeat;
-  background-position: center 89px;
 }
 
 .souvenir-advantages-item {
   background-image: url("/images/advantages/souvenir.svg");
-  background-repeat: no-repeat;
-  background-position: center 89px;
 }
 
 .advantages-sublist .advantages-title {
@@ -643,6 +673,8 @@ body {
 }
 
 .inner-header {
+  position: relative;
+  z-index: 1;
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -674,6 +706,7 @@ body {
 
 .breadcrumbs {
   display: flex;
+  align-items: center;
   margin: 0;
   padding: 0;
 
@@ -684,20 +717,38 @@ body {
   list-style: none;
 }
 
+.home-breadcrumbs-link {
+  background-image: url("/images/home.svg");
+  background-repeat: no-repeat;
+  background-position: center 1px;
+}
+
 .breadcrumbs-link {
   display: block;
 
   color: inherit;
-
-  border: 1px solid red;
-
   min-width: 20px;
   min-height: 20px;
 }
 
-.breadcrumbs-item:not(:last-child) {
+.breadcrumbs-item {
+  position: relative;
   margin-right: 26px;
 }
+
+.breadcrumbs-item:after {
+  position: absolute;
+  top: -1px;
+  right: -16px;
+  width: 5px;
+  height: 8px;
+  content: url("/images/arrow-breadcrumbs.svg");
+}
+
+.breadcrumbs-item:last-child:after {
+  content: none;
+}
+
 
 .catalog-filter {
   display: flex;
