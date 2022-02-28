@@ -35,7 +35,7 @@ body {
   flex-direction: column;
   min-height: 100%;
   background: #ffffff;
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .visually-hidden {
@@ -54,7 +54,6 @@ body {
 
 .button {
   display: inline-block;
-  padding: 0;
   padding: 8px 36px;
 
   font-family: inherit;
@@ -78,27 +77,41 @@ body {
   background-color: #615048;
 }
 
+.button:focus {
+  border-radius: 4px;
+
+  outline: 3px solid #83b3d3;
+}
+
 .button:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
 .button-blue {
   padding: 18px 35px;
+
   background-color: #83b3d3;
 }
 
 .button-blue:hover {
-  background-color: #68A2CA;
+  background-color: #68a2ca;
+
+  outline: 1px solid #756257;
+  box-sizing: border-box;
 }
 
 .button-blue:focus {
-  outline: 3px solid #FFFFFF;
   border-radius: 4px;
+
+  outline: 3px solid #756257;
 }
 
 .button-blue:active {
-  color:rgba(255, 255, 255, 0.3);
-  background-color: #68A2CA;
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #68a2ca;
+
+  outline: none;
 }
 
 .button-link {
@@ -120,13 +133,14 @@ body {
 }
 
 .button-link:focus .button-link-title {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .button-link:focus {
-  outline: 3px solid #83B3D3;
-  box-sizing: border-box;
   border-radius: 4px;
+
+  outline: 3px solid #83b3d3;
+  box-sizing: border-box;
 }
 
 .button-link:active .button-link-title {
@@ -134,7 +148,17 @@ body {
 }
 
 .button-green {
-  color: rgba(255, 255, 255, 0.6)
+  background: #7db54f;
+}
+
+.button-green:hover,
+.button-green:focus,
+.button-green:active {
+  background: #6c9e42;
+}
+
+.button-green:active {
+  outline: none;
 }
 
 .navigation {
@@ -675,6 +699,7 @@ body {
 .inner-header {
   position: relative;
   z-index: 1;
+
   font-size: 18px;
   line-height: 23px;
   font-weight: 400;
@@ -688,9 +713,11 @@ body {
 }
 
 .page-container {
+  display: flex;
   width: 1060px;
   margin: 0 auto;
 
+  flex-direction: column;
   padding-top: 35px;
 }
 
@@ -706,19 +733,19 @@ body {
 
 .breadcrumbs {
   display: flex;
-  align-items: center;
   margin: 0;
   padding: 0;
 
   font-size: 16px;
   line-height: 21px;
 
+  align-items: center;
   margin-bottom: 45px;
   list-style: none;
 }
 
 .home-breadcrumbs-link {
-  background-image: url("/images/home.svg");
+  background-image: url("../images/home.svg");
   background-repeat: no-repeat;
   background-position: center 1px;
 }
@@ -727,12 +754,14 @@ body {
   display: block;
 
   color: inherit;
+
   min-width: 20px;
   min-height: 20px;
 }
 
 .breadcrumbs-item {
   position: relative;
+
   margin-right: 26px;
 }
 
@@ -740,15 +769,16 @@ body {
   position: absolute;
   top: -1px;
   right: -16px;
+
   width: 5px;
   height: 8px;
-  content: url("/images/arrow-breadcrumbs.svg");
+
+  content: url("../images/arrow-breadcrumbs.svg");
 }
 
 .breadcrumbs-item:last-child:after {
   content: none;
 }
-
 
 .catalog-filter {
   display: flex;
@@ -804,6 +834,12 @@ body {
   flex-direction: column;
 }
 
+.submit-button-blue:focus {
+  border-radius: 4px;
+
+  outline: 3px solid #ffffff;
+}
+
 .sort-wrapper {
   display: flex;
 
@@ -831,11 +867,42 @@ body {
 }
 
 .type-link {
+  position: relative;
+
   display: block;
   width: 48px;
   height: 48px;
 
-  border: 1px solid red;
+  border-radius: 4px;
+
+  outline: 2px solid #e6e6e6;
+  box-sizing: border-box;
+  margin-left: 8px;
+}
+
+.type-link:hover,
+.type-link:focus {
+  outline: 2px solid #83b3d3;
+}
+
+.type-link:active {
+  outline: 2px solid #000000;
+}
+
+.current-type-link {
+  outline: 2px solid #000000;
+}
+
+.sort-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  margin: auto;
+
+  fill: #000000;
 }
 
 .hotel-list {
@@ -887,6 +954,18 @@ body {
   row-gap: 16px;
 }
 
+.hotel-card-image-link:hover {
+  opacity: 0.6;
+}
+
+.hotel-card-image-link:focus {
+  outline: 3px solid #83b3d3;
+}
+
+.hotel-card-image-link:active {
+  opacity: 0.3;
+}
+
 .hotel-card-title-link {
   color: inherit;
 
@@ -927,11 +1006,15 @@ body {
 .hotel-card-button {
   grid-area: details;
   justify-self: start;
+  padding-right: 22px;
+  padding-left: 22px;
 }
 
 .favorite-card-button {
   grid-area: favorite;
   justify-self: end;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .card-stars {
@@ -955,6 +1038,9 @@ body {
 }
 
 .load-more {
+  width: 620px;
+
+  align-self: center;
   margin-bottom: 60px;
 }
 
@@ -978,6 +1064,7 @@ body {
 .pagination-link {
   display: flex;
   height: 55px;
+  padding: 0;
 
   font-size: 20px;
   line-height: 26px;
@@ -1001,6 +1088,9 @@ body {
   color: #000000;
 
   background-color: #f2f2f2;
+
+  pointer-events: none;
+  cursor: default;
 }
 
 .catalog-quantity-card {
