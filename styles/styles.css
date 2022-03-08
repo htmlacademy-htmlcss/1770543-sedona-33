@@ -549,6 +549,7 @@ body {
 
 .newsletter-form {
   display: flex;
+
   justify-content: center;
   padding-bottom: 94px;
 }
@@ -556,8 +557,10 @@ body {
 .field-newsletter-email {
   width: 600px;
   padding: 22px;
-  background-color: #F2F2F2;
+
+  background-color: #f2f2f2;
   border: none;
+
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
@@ -568,9 +571,11 @@ body {
 }
 
 .button-newsletter-email {
+  width: 200px;
+
   font-size: 20px;
   line-height: 26px;
-  width: 200px;
+
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 10px;
@@ -782,9 +787,10 @@ body {
 }
 
 .breadcrumbs-link:focus {
-  outline: 3px solid #83B3D3;
-  box-sizing: border-box;
   border-radius: 4px;
+
+  outline: 3px solid #83b3d3;
+  box-sizing: border-box;
 }
 
 .breadcrumbs-link:active {
@@ -799,10 +805,11 @@ body {
 
 .breadcrumbs-link {
   display: block;
-  text-decoration: none;
+  padding: 0 3px;
 
   color: inherit;
-  padding: 0 3px;
+
+  text-decoration: none;
   min-width: 20px;
   min-height: 20px;
 }
@@ -815,6 +822,7 @@ body {
   position: absolute;
   top: -2px;
   right: -16px;
+
   width: 5px;
   height: 8px;
 
@@ -846,14 +854,19 @@ body {
 }
 
 .catalog-filter-title {
-  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+
+  margin-bottom: 30px;
 }
 
 .catalog-filter-item {
   margin-bottom: 13px;
+}
+
+.filter-list-price .catalog-filter-item {
+  margin-bottom: 32px;
 }
 
 .filter-group-infrastructure {
@@ -864,7 +877,9 @@ body {
 
 .control {
   position: relative;
+
   display: block;
+
   padding-left: 39px;
 }
 
@@ -872,10 +887,13 @@ body {
   position: absolute;
   top: 2px;
   left: 0;
+
   width: 20px;
   height: 20px;
-  background: #FFFFFF;
+
   border-radius: 4px;
+
+  background: #ffffff;
 }
 
 .control-input[type="checkbox"]:checked + .control-mark {
@@ -885,12 +903,13 @@ body {
 }
 
 .control:hover {
- opacity: 0.6;
+  opacity: 0.6;
 }
 
 .control-mark:focus {
-  outline: 3px solid #83B3D3;
   opacity: 0.6;
+
+  outline: 3px solid #83b3d3;
 }
 
 .control-mark:active {
@@ -909,12 +928,15 @@ body {
 
 .control-input[type="radio"]:checked + .control-mark::after {
   position: absolute;
-  width: 10px;
-  height: 10px;
   top: 5px;
   left: 5px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: #3f5e72;
   border-radius: 50%;
-  background-color: #3F5E72;
+
   content: "";
 }
 
@@ -924,6 +946,129 @@ body {
 
 .filter-list-price .control-input {
   width: 144px;
+  height: 48px;
+  padding: 14px 19px;
+
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  color: #ffffff;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+
+  padding-right: 35px;
+  box-sizing: border-box;
+}
+
+.label-min .control-input {
+  border-right: 1px solid #ffffff;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.label-max .control-input {
+  border-left: 1px solid #ffffff;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.label-min .control-input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.label-max .control-input:hover {
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.filter-list-price .control-input:focus {
+  box-shadow: 0px 0px 0px 3px #81B3D2,
+        inset 0px 0px 0px 3px #81B3D2;
+}
+
+.filter-list-price .control-input:active {
+  background: #756257;
+}
+
+.control-label {
+  position: relative;
+}
+
+.filter-list-price .control-label::after {
+  position: absolute;
+  top: -1px;
+  right: 14px;
+
+  width: 17px;
+  height: 23px;
+
+  color: rgba(255, 255, 255, 0.3);
+
+  content: "от";
+}
+
+.filter-list-price .label-max::after {
+  content: "до";
+}
+
+
+
+.filter-list-price .control-input::placeholder {
+  color: #ffffff;
+}
+
+.range-scale {
+  position: relative;
+
+  height: 4px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+  position: absolute;
+
+  height: 4px;
+
+  background-color: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -8px;
+
+  width: 20px;
+  height: 20px;
+
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+.toggle-min {
+  left: 0;
+}
+
+.toggle-max {
+  right: -8px;
+}
+
+.range-toggle:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:focus {
+  outline: 3px solid #83b3d3;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+  outline: 2px solid #83b3d3;
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
 }
 
 .catalog-filter-buttons {
@@ -931,7 +1076,14 @@ body {
   width: 160px;
 
   margin-left: auto;
+  margin-top: 55px;
   flex-direction: column;
+}
+
+.submit-button-blue {
+  height: 48px;
+  padding: 0;
+  margin-bottom: 12px;
 }
 
 .submit-button-blue:focus {
@@ -945,6 +1097,42 @@ body {
 
   align-items: center;
   margin-bottom: 53px;
+}
+
+.select {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 287px;
+  margin-right: auto;
+}
+
+.select-control {
+  width: 100%;
+  padding: 13px 19px;
+  padding-right: 44px;
+  font: inherit;
+  color: #333333;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+  background-color: #ffffff;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  background-image: url("../images/arrow-select.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  appearance: none;
+}
+
+.select-control:hover,
+.select-control:focus {
+  border-color: #83B3D3;
+}
+
+.select-control:active {
+  color: rgba(51, 51, 51, 0.3);
+  background-image: url("../images/arrow-select-active.png");
 }
 
 .catalog-hotels-title {
@@ -1009,11 +1197,14 @@ body {
   display: grid;
   margin: 0;
   padding: 0;
+  padding-bottom: 54px;
 
   grid-template-columns: repeat(3, 1fr);
   gap: 10px 18px;
   margin-bottom: 30px;
   list-style-type: none;
+
+  border-bottom: 1px solid #E6E6E6;
 }
 
 .hotel-card {
@@ -1141,7 +1332,7 @@ body {
   width: 620px;
 
   align-self: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .inner-footer {
@@ -1149,6 +1340,9 @@ body {
 
   justify-content: space-between;
   align-items: center;
+  padding-top: 30px;
+
+  border-top: 1px solid #E6E6E6;
 }
 
 .pagination {
@@ -1195,9 +1389,14 @@ body {
 
 .catalog-quantity-card {
   display: flex;
-
-  align-items: flex-start;
+  width: 386px;
+  align-items: center;
 }
+
+.quantity-card {
+  width: 160px;
+}
+
 
 .catalog-quantity-card-title {
   margin: 0;

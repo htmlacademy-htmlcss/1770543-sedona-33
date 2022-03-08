@@ -231,7 +231,7 @@
             </legend>
             <ul class="catalog-filter-list filter-list-price">
               <li class="catalog-filter-item">
-                <label class="control-label">
+                <label class="control-label label-min">
                   <input
                     class="control-input"
                     type="text"
@@ -245,7 +245,7 @@
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control-label">
+                <label class="control-label label-max">
                   <input
                     class="control-input"
                     type="text"
@@ -258,16 +258,20 @@
                 </label>
               </li>
             </ul>
-            <input
-              id="price"
-              type="range"
-              value="0"
-              min="0"
-              max="9000"
-              step="100"
-              onchange="priceMin.value = price.value"
-              tabindex="1"
-            >
+            <div class="range-scale">
+              <div class="range-bar" style="left: 0; width: 227px;">
+                <button class="range-toggle toggle-min">
+                  <span class="visually-hidden">
+                    Изменить минимальную цену.
+                  </span>
+                </button>
+                <button class="range-toggle toggle-max">
+                  <span class="visually-hidden">
+                    Изменить максимальную цену.
+                  </span>
+                </button>
+              </div>
+            </div>
           </fieldset>
           <div class="catalog-filter-buttons">
             <button
@@ -295,20 +299,23 @@
         <h2 class="catalog-hotels-title">
           Найдено гостиниц: 38
         </h2>
-        <select
+        <div class="select sorting-type">
+          <select
           class="select-control"
           aria-label="Сортировка"
-        >
-          <option value="popular">
-            Сначала дешёвые
-          </option>
-          <option value="cheap">
-            Сначала дорогие
-          </option>
-          <option value="expensive">
-            Сначала популярные
-          </option>
-        </select>
+          >
+            <option value="popular">
+              Сначала дешёвые
+            </option>
+            <option value="cheap">
+              Сначала дорогие
+            </option>
+            <option value="expensive">
+              Сначала популярные
+            </option>
+          </select>
+        </div>
+
         <div class="sort-show-type">
           <a
             class="type-link current-type-link"
@@ -660,20 +667,22 @@
           <h2 class="catalog-quantity-card-title">
             Гостиниц на странице:
           </h2>
-          <select class="select-control">
-            <option
-              value="4"
-              selected
-            >
-              4
-            </option>
-            <option value="6">
-              6
-            </option>
-            <option value="8">
-              8
-            </option>
-          </select>
+          <div class="select quantity-card">
+            <select class="select-control">
+              <option
+                value="4"
+                selected
+              >
+                4
+              </option>
+              <option value="6">
+                6
+              </option>
+              <option value="8">
+                8
+              </option>
+            </select>
+          </div>
         </form>
       </footer>
     </section>
