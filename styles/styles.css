@@ -1397,7 +1397,6 @@ body {
   width: 160px;
 }
 
-
 .catalog-quantity-card-title {
   margin: 0;
   padding: 0;
@@ -1407,4 +1406,342 @@ body {
   font-weight: 400;
 
   margin-right: 51px;
+}
+
+.modal-container {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(242, 242, 242, 0.8);
+}
+
+.modal-container-close {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  margin: auto;
+  padding: 62px 68px;
+  background-color: #FFFFFF;
+  width: 715px;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.modal-close-button {
+  position: absolute;
+  padding: 0;
+  top: 62px;
+  right: 68px;
+  width: 53px;
+  height: 53px;
+  background: #F2F2F2;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.modal-close-button::before,
+.modal-close-button::after {
+  position: absolute;
+  top: 25px;
+  left: 19px;
+  width: 16px;
+  height: 2px;
+  background-color: #000000;
+  content: "";
+}
+
+.modal-close-button::before {
+  transform: rotate(45deg);
+}
+
+.modal-close-button::after {
+  transform: rotate(-45deg);
+}
+
+.modal-close-button:hover {
+  background-color: #E6E6E6;
+}
+
+.modal-close-button:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.modal-close-button:active {
+  background-color: #E6E6E6;
+  opacity: 0.3;
+}
+
+.modal-title {
+  display: block;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 64px;
+  font-size: 30px;
+  line-height: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 153px 135px 153px 135px;
+  grid-template-areas:
+    "label-check-in field-check-in field-check-in field-check-in"
+    "label-check-out field-check-out field-check-out field-check-out"
+    "label-number-adults counter-number-adults label-number-children counter-number-children"
+    "button-modal button-modal button-modal button-modal";
+  row-gap: 40px;
+}
+
+.date-check-in {
+  grid-area: label-check-in;
+  display: flex;
+  align-items: center;
+}
+
+.field-check-in {
+  grid-area: field-check-in;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.date-check-out {
+  grid-area: label-check-out;
+  display: flex;
+  align-items: center;
+}
+
+.field-check-out {
+  grid-area: field-check-out;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.number-adults {
+  grid-area: label-number-adults;
+
+}
+
+.counter-number-adults {
+  grid-area: counter-number-adults;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.number-children {
+  grid-area: label-number-children;
+}
+
+.counter-number-children {
+  grid-area: counter-number-children;
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.button-modal {
+  grid-area: button-modal;
+}
+
+.form-label {
+  position: relative;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  min-height: 50px;
+}
+
+.field-check {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  padding: 18px;
+  padding-right: 54px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+  border: none;
+  background-image: url("../images/modal/date.svg");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.field-check::placeholder {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  color: #000000;
+  opacity: 0.6;
+}
+
+.field-check:hover {
+  background-color: #E6E6E6;
+}
+
+.field-check:focus {
+  background-color: #E6E6E6;
+  outline: 3px solid #83B3D3;
+}
+
+.field-check:active {
+  background-color: #FFFFFF;
+  outline: 2px solid #000000;
+}
+
+.field-validation {
+  position: absolute;
+  top: 40px;
+  left: 160px;
+  font-weight: 400;
+  width: 420px;
+  font-size: 16px;
+  line-height: 40px;
+  color: #333333;
+}
+
+.field-validation.error-message {
+  color: #FF5757;
+}
+
+.number-children {
+  padding-left: 56px;
+}
+
+.counter-number-adults,
+.counter-number-children {
+  display: flex;
+  width: 135px;
+  background-color: #F2F2F2;
+  border-radius: 4px;
+}
+
+.button-number {
+  position: relative;
+  width: 45px;
+  padding: 0 20px;
+  border: none;
+  background-color: transparent;
+  border-radius: 4px;
+
+
+  box-sizing: border-box;
+}
+
+.button-number-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  fill: #000000;
+  margin: auto;
+  opacity: 0.3;
+}
+
+.button-number:hover {
+  opacity: 1;
+}
+
+.button-number:focus {
+  outline: none;
+}
+
+.button-number:focus svg {
+  opacity: 1;
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.button-number:active {
+  opacity: 0.2;
+}
+
+.field-number-adults,
+.field-number-children {
+  width: 45px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  border: none;
+  background-color: #F2F2F2;
+  box-sizing: border-box;
+}
+
+.field-number-adults::-webkit-outer-spin-button,
+.field-number-adults::-webkit-inner-spin-button,
+.field-number-children::-webkit-outer-spin-button,
+.field-number-children::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+.tooltip {
+  position: absolute;
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+}
+
+.tooltip-toggle {
+  border: none;
+  background-color: #83B3D3;
+  padding: 0;
+  margin: 0;
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-image: url("../images/tooltip-info.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.tooltip-toggle:hover {
+  background-color: #68A2CA;
+}
+
+.tooltip-text {
+  background-color: #333333;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: none;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.3);
+
+  width: 256px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 100%;
+  margin-top: 15px;
+  left: 50%;
+  transform: translate(-50%);
+  display: none;
+}
+
+.tooltip-toggle:hover + .tooltip-text,
+.tooltip-toggle:focus + .tooltip-text {
+  display: block;
+}
+
+.tooltip-text:after {
+  content:'';
+  background-image: url("../images/arrow-tooltip.svg");
+  width: 19px;
+  height: 9px;
+  position:absolute;
+  bottom: 100%;
+  left:0;
+  right:0;
+  margin-left: auto;
+  margin-right: auto;
 }
