@@ -271,7 +271,7 @@
           </span>
         </label>
         <input
-          class="field"
+          class="field field-newsletter-email"
           placeholder="Ваш e-mail"
           type="email"
           name="newsletter-email"
@@ -279,7 +279,7 @@
           required
         >
         <button
-          class="button button-blue"
+          class="button button-blue button-newsletter-email"
           type="submit"
         >
           Подписаться
@@ -415,6 +415,176 @@
       </p>
     </div>
   </footer>
+  <div class="modal-container modal-container-close">
+    <div class="modal modal-search">
+      <button class="modal-close-button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form
+          class="form-modal-search"
+          action="https://echo.htmlacademy.ru/"
+          method="post"
+        >
+          <div class="form-container">
+            <label
+              class="form-label date-check-in"
+              for="date-check-in"
+            >
+              <span class="label-date-check-in">Дата заезда:</span>
+              <span class="field-validation error-message">
+                Мы не можем отправить вас в прошлое.
+              </span>
+            </label>
+            <input
+              class="field-check field-check-in"
+              id="date-check-in"
+              type="text"
+              name="date-check-in"
+              placeholder="Укажите дату"
+            >
+            <label
+              class="form-label date-check-out"
+              for="date-check-out"
+            >
+              <span>Дата выезда:</span>
+              <span class="field-validation">
+                На эти даты есть свободные номера. Пока есть.
+              </span>
+            </label>
+            <input
+              class="field-check field-check-out"
+              id="date-check-out"
+              type="text"
+              name="date-check-out"
+              placeholder="Укажите дату"
+            >
+            <label
+              class="form-label number-adults"
+              for="number-adults"
+            >
+              <span class="label-number-adults">Взрослые:</span>
+            </label>
+            <div class="counter-number-adults">
+              <button
+                class="button-number button-down"
+                type="button"
+              >
+                <svg
+                  class="button-number-icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 9v2h14V9H3Z" />
+                </svg>
+              </button>
+              <input
+                class="field-number-adults"
+                id="number-adults"
+                type="number"
+                name="number-adults"
+                value="2"
+              >
+              <button
+                class="button-number button-up"
+                type="button"
+              >
+                <svg
+                  class="button-number-icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                </svg>
+              </button>
+            </div>
+
+            <span class="form-label label-number-children">
+              <label
+                class="number-children"
+                for="number-children"
+              >
+                Дети:
+              </label>
+              <span class="tooltip">
+                <button
+                  class="tooltip-toggle"
+                  type="button"
+                  aria-labelledby="tooltip-label"
+                >
+                </button>
+                <span
+                  class="tooltip-text"
+                  role="tooltip"
+                  id="tooltip-label"
+                >
+                  Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет.&ensp;Дети до 6 лет
+                  размещаются бесплатно.
+                </span>
+              </span>
+            </span>
+
+            <div class="counter-number-children">
+              <button
+                class="button-number button-down"
+                type="button"
+              >
+                <svg
+                  class="button-number-icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M3 9v2h14V9H3Z" />
+                </svg>
+              </button>
+              <input
+                class="field-number-children"
+                id="number-children"
+                type="number"
+                name="number-children"
+                value="1"
+              >
+              <button
+                class="button-number button-up"
+                type="button"
+              >
+                <svg
+                  class="button-number-icon"
+                  aria-hidden="true"
+                  focusable="false"
+                  width="20"
+                  height="20"
+                  fill="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
+                </svg>
+              </button>
+            </div>
+            <a
+              class="button button-blue button-modal"
+              href="/catalog.html"
+            >
+              Найти
+            </a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
 </body>
 
 </html>
