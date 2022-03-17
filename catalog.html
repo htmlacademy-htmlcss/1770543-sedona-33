@@ -13,7 +13,10 @@
 <body>
   <header class="page-header">
     <nav class="navigation">
-      <a class="navigation-logo">
+      <a
+        class="navigation-logo"
+        href="/"
+      >
         <img
           src="images/logo/sedona.svg"
           width="139"
@@ -64,7 +67,7 @@
               />
             </svg>
             <span class="visually-hidden">
-              Поиск
+              Перейти в поиск.
             </span>
           </a>
         </li>
@@ -87,7 +90,7 @@
               />
             </svg>
             <span class="visually-hidden">
-              Лайк
+              Перейти в избранное.
             </span>
           </a>
         </li>
@@ -152,7 +155,7 @@
                     name="pool"
                     checked
                   >
-                  <span class="control-mark" tabindex="1"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Бассейн</span>
                 </label>
               </li>
@@ -164,7 +167,7 @@
                     name="parking"
                     checked
                   >
-                  <span class="control-mark" tabindex="1"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Парковка</span>
                 </label>
               </li>
@@ -175,7 +178,7 @@
                     type="checkbox"
                     name="wifi"
                   >
-                  <span class="control-mark" tabindex="1"></span>
+                  <span class="control-mark"></span>
                   <span class="control-label">Wi-Fi</span>
                 </label>
               </li>
@@ -187,7 +190,7 @@
             </legend>
             <ul class="catalog-filter-list">
               <li class="catalog-filter-item">
-                <label class="control" tabindex="1">
+                <label class="control">
                   <input
                     class="control-input visually-hidden"
                     type="radio"
@@ -200,7 +203,7 @@
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control" tabindex="1">
+                <label class="control">
                   <input
                     class="control-input visually-hidden"
                     type="radio"
@@ -212,7 +215,7 @@
                 </label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control" tabindex="1">
+                <label class="control">
                   <input
                     class="control-input visually-hidden"
                     type="radio"
@@ -226,7 +229,7 @@
             </ul>
           </fieldset>
           <fieldset class="catalog-filter-group filter-group-price">
-            <legend class="catalog-filter-title">
+            <legend class="catalog-filter-title filter-title-price">
               Стоимость, ₽:
             </legend>
             <ul class="catalog-filter-list filter-list-price">
@@ -240,7 +243,7 @@
                     placeholder="0"
                   >
                   <span class="visually-hidden">
-                    Минимальная цена
+                    Минимальная цена.
                   </span>
                 </label>
               </li>
@@ -253,19 +256,28 @@
                     placeholder="9000"
                   >
                   <span class="visually-hidden">
-                    Максимальная цена
+                    Максимальная цена.
                   </span>
                 </label>
               </li>
             </ul>
             <div class="range-scale">
-              <div class="range-bar" style="left: 0; width: 227px;">
-                <button class="range-toggle toggle-min">
+              <div
+                class="range-bar"
+                style="left: 0; width: 227px;"
+              >
+                <button
+                  class="range-toggle toggle-min"
+                  type="button"
+                >
                   <span class="visually-hidden">
                     Изменить минимальную цену.
                   </span>
                 </button>
-                <button class="range-toggle toggle-max">
+                <button
+                  class="range-toggle toggle-max"
+                  type="button"
+                >
                   <span class="visually-hidden">
                     Изменить максимальную цену.
                   </span>
@@ -277,14 +289,12 @@
             <button
               class="button button-blue submit-button-blue"
               type="submit"
-              tabindex="1"
             >
               Применить
             </button>
             <button
               class="button button-link"
               type="reset"
-              tabindex="1"
             >
               <span class="button-link-title">Сбросить</span>
             </button>
@@ -301,8 +311,8 @@
         </h2>
         <div class="select sorting-type">
           <select
-          class="select-control"
-          aria-label="Сортировка"
+            class="select-control"
+            aria-label="Сортировка"
           >
             <option value="popular">
               Сначала дешёвые
@@ -333,7 +343,7 @@
               <path d="M6 3H2v6h4V3ZM18 3h-4v6h4V3ZM12 3H8v6h4V3ZM6 11H2v6h4v-6ZM18 11h-4v6h4v-6ZM12 11H8v6h4v-6Z" />
             </svg>
             <span class="visually-hidden">
-              Показать карточки
+              Показать карточки.
             </span>
           </a>
           <a
@@ -353,7 +363,7 @@
               <path d="M16 5V11H4V5H16ZM18 3H2V13H18V3Z" />
             </svg>
             <span class="visually-hidden">
-              Показать слайды
+              Показать слайды.
             </span>
           </a>
           <a
@@ -379,7 +389,7 @@
               <path d="M18 15H6V17H18V15Z" />
             </svg>
             <span class="visually-hidden">
-              Показать список
+              Показать список.
             </span>
           </a>
         </div>
@@ -659,11 +669,7 @@
           </li>
         </ul>
 
-        <form
-          class="catalog-quantity-card"
-          action="https://echo.htmlacademy.ru/"
-          method="get"
-        >
+        <div class="catalog-quantity-card">
           <h2 class="catalog-quantity-card-title">
             Гостиниц на странице:
           </h2>
@@ -683,18 +689,18 @@
               </option>
             </select>
           </div>
-        </form>
+        </div>
       </footer>
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer inner-page">
     <section class="newsletter">
       <h2 class="page-footer-title">
         Подпишитесь на рассылку
       </h2>
       <p class="page-footer-slogan">
-        Только полезная информация и никакого спама,<br>
+        Только полезная информация и никакого спама,<br />
         честное бойскаутское!
       </p>
       <form

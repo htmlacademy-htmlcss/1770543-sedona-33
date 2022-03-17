@@ -8,6 +8,12 @@
     rel="stylesheet"
     href="styles/styles.css"
   >
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="images/favicon-32x32.png"
+  >
 </head>
 
 <body>
@@ -64,7 +70,7 @@
               />
             </svg>
             <span class="visually-hidden">
-              Поиск
+              Перейти в поиск.
             </span>
           </a>
         </li>
@@ -87,13 +93,13 @@
               />
             </svg>
             <span class="visually-hidden">
-              Лайк
+              Перейти в избранное.
             </span>
           </a>
         </li>
-        <li class="navigation-item">
+        <li class="navigation-item button-login">
           <a
-            class="button button-login"
+            class="button"
             href="#"
             aria-label="Вход"
           >
@@ -106,7 +112,7 @@
 
   <main class="main-index main-container">
     <h1 class="visually-hidden">
-      Сайт города Седона, штат Аризона
+      Сайт города Седона, штат Аризона.
     </h1>
     <div class="welcome-container">
       <img
@@ -118,11 +124,11 @@
       >
     </div>
     <p class="main-text">
-      Седона — небольшой городок в Аризоне,<br>заслуживающий большего!
+      Седона — небольшой городок в Аризоне,<br />заслуживающий большего!
     </p>
     <section class="advantages">
       <h2 class="visually-hidden">
-        Преимущества
+        Преимущества.
       </h2>
       <p class="advantages-text">
         Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!
@@ -132,13 +138,13 @@
           <figure class="advantages-container">
             <figcaption class="advantages-item">
               <h3 class="advantages-title">
-                Настоящий<br>городок
+                Настоящий<br />городок
               </h3>
               <p class="advantages-number">
                 — №1 —
               </p>
               <p class="advantages-description">
-                Седона — не аттракцион<br>для туристов, там течёт<br>своя жизнь
+                Седона — не аттракцион<br />для туристов, там течёт<br />своя жизнь
               </p>
             </figcaption>
             <img
@@ -153,24 +159,24 @@
               <h4 class="advantages-title">
                 Жильё
               </h4>
-              <p class="advantages-description">
-                Рекомендуем пожить<br>в настоящем мотеле,<br>всё как в кино!
+              <p class="advantages-sublist-description">
+                Рекомендуем пожить<br />в настоящем мотеле,<br />всё как в кино!
               </p>
             </li>
             <li class="advantages-item eating-advantages-item">
               <h4 class="advantages-title">
                 Еда
               </h4>
-              <p class="advantages-description">
-                Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!
+              <p class="advantages-sublist-description">
+                Всегда заказывайте<br />топовый фирменный бургер, вы не разочаруетесь!
               </p>
             </li>
             <li class="advantages-item souvenir-advantages-item">
               <h4 class="advantages-title">
                 Сувениры
               </h4>
-              <p class="advantages-description">
-                Не только китайского,<br>но и настоящего местного производства!
+              <p class="advantages-sublist-description">
+                Не только китайского,<br />но и настоящего местного производства!
               </p>
             </li>
           </ul>
@@ -185,7 +191,7 @@
             >
             <figcaption class="advantages-item">
               <h3 class="advantages-title">
-                Там есть мост дьявола
+                Там есть<br />мост дьявола
               </h3>
               <p class="advantages-number">
                 — №2 —
@@ -209,7 +215,7 @@
         </li>
         <li class="advantages-item">
           <h3 class="advantages-title">
-            Красивая<br>дорога
+            Красивая<br />дорога
           </h3>
           <p class="advantages-number">
             — №4 —
@@ -220,7 +226,7 @@
         </li>
         <li class="advantages-item">
           <h3 class="advantages-title">
-            Мало<br>туристов
+            Мало<br />туристов
           </h3>
           <p class="advantages-number">
             — №5 —
@@ -233,14 +239,16 @@
     </section>
     <section class="hotels">
       <h2 class="visually-hidden">
-        Подбор гостиницы
+        Подбор гостиницы.
       </h2>
       <p class="hotels-title">
         Заинтересовались?
       </p>
       <p class="hotels-text">
-        Укажите предполагаемые даты поездки,<br>
-        и мы покажем вам лучшие предложения гостиниц в Седоне
+        Укажите предполагаемые даты поездки,<br />
+        <span class="hotels-text-bottom">
+          и мы покажем вам лучшие предложения гостиниц в Седоне
+        </span>
       </p>
       <a
         class="button hotels-link"
@@ -257,7 +265,7 @@
         Подпишитесь на рассылку
       </h2>
       <p class="page-footer-slogan">
-        Только полезная информация и никакого спама,<br>
+        Только полезная информация и никакого спама,<br />
         честное бойскаутское!
       </p>
       <form
@@ -417,7 +425,10 @@
   </footer>
   <div class="modal-container modal-container-close">
     <div class="modal modal-search">
-      <button class="modal-close-button">
+      <button
+        class="modal-close-button"
+        type="button"
+      >
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
@@ -432,7 +443,9 @@
               class="form-label date-check-in"
               for="date-check-in"
             >
-              <span class="label-date-check-in">Дата заезда:</span>
+              <span class="label-date-check-in">
+                Дата заезда:
+              </span>
               <span class="field-validation error-message">
                 Мы не можем отправить вас в прошлое.
               </span>
@@ -443,12 +456,15 @@
               type="text"
               name="date-check-in"
               placeholder="Укажите дату"
+              required
             >
             <label
               class="form-label date-check-out"
               for="date-check-out"
             >
-              <span>Дата выезда:</span>
+              <span>
+                Дата выезда:
+              </span>
               <span class="field-validation">
                 На эти даты есть свободные номера. Пока есть.
               </span>
@@ -459,12 +475,15 @@
               type="text"
               name="date-check-out"
               placeholder="Укажите дату"
+              required
             >
             <label
               class="form-label number-adults"
               for="number-adults"
             >
-              <span class="label-number-adults">Взрослые:</span>
+              <span class="label-number-adults">
+                Взрослые:
+              </span>
             </label>
             <div class="counter-number-adults">
               <button
@@ -482,6 +501,9 @@
                 >
                   <path d="M3 9v2h14V9H3Z" />
                 </svg>
+                <span class="visually-hidden">
+                  Уменьшить количество взрослых.
+                </span>
               </button>
               <input
                 class="field-number-adults"
@@ -489,6 +511,7 @@
                 type="number"
                 name="number-adults"
                 value="2"
+                required
               >
               <button
                 class="button-number button-up"
@@ -505,6 +528,9 @@
                 >
                   <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
                 </svg>
+                <span class="visually-hidden">
+                  Увеличить количество взрослых.
+                </span>
               </button>
             </div>
 
@@ -549,6 +575,9 @@
                 >
                   <path d="M3 9v2h14V9H3Z" />
                 </svg>
+                <span class="visually-hidden">
+                  Уменьшить количество детей.
+                </span>
               </button>
               <input
                 class="field-number-children"
@@ -556,6 +585,7 @@
                 type="number"
                 name="number-children"
                 value="1"
+                required
               >
               <button
                 class="button-number button-up"
@@ -572,14 +602,17 @@
                 >
                   <path d="M17 9h-6V3H9v6H3v2h6v6h2v-6h6V9Z" />
                 </svg>
+                <span class="visually-hidden">
+                  Увеличить количество детей.
+                </span>
               </button>
             </div>
-            <a
+            <button
               class="button button-blue button-modal"
-              href="/catalog.html"
+              type="submit"
             >
               Найти
-            </a>
+            </button>
           </div>
         </form>
       </section>
