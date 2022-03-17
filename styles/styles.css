@@ -264,11 +264,16 @@ img {
   margin-left: auto;
 }
 
+.navigation-item {
+  margin-right: 2px;
+}
+
 .navigation-link {
   position: relative;
 
   display: block;
-  padding: 20px 17px;
+  padding: 19px 17px;
+  padding-right: 15px;
 
   font-size: 20px;
   line-height: 26px;
@@ -291,7 +296,7 @@ img {
 .navigation-link-current::before {
   position: absolute;
   right: 17px;
-  bottom: -1px;
+  bottom: -3px;
   left: 17px;
   z-index: 2;
 
@@ -312,11 +317,12 @@ img {
   padding-left: 0;
   min-width: 42px;
   min-height: 20px;
+  padding-bottom: 25px;
 }
 
 .navigation-icon {
   position: absolute;
-  top: 3px;
+  top: 0;
   right: -2px;
   bottom: 0;
   left: 0;
@@ -368,7 +374,7 @@ img {
   color: #ffffff;
 
   letter-spacing: -0.1em;
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .heart-navigation-link:active {
@@ -376,7 +382,8 @@ img {
 }
 
 .button-login {
-  margin-top: 4px;
+  margin-top: 1px;
+  margin-right: -1px;
 }
 
 .navigation-item.button-login + .navigation-item.button-login {
@@ -391,9 +398,6 @@ img {
 }
 
 .welcome-container {
-  position: relative;
-  z-index: 1;
-
   color: #000000;
 
   background-color: #b7ccdf;
@@ -700,7 +704,7 @@ img {
 
 .field-newsletter-email:focus:invalid,
 .field-newsletter-email.error:focus {
-  border: 2px solid #ff5757;
+  outline: 2px solid #ff5757;
 }
 
 .field-newsletter-email::-webkit-input-placeholder {
@@ -774,7 +778,7 @@ img {
 
 .footer-social {
   max-width: 110px;
-  margin-right: 63px;
+  margin-right: 72px;
 }
 
 .footer-social-list {
@@ -783,6 +787,8 @@ img {
   display: flex;
   margin: 0;
   padding: 0;
+  margin-top: -17px;
+  margin-left: -9px;
 
   -ms-flex-wrap: wrap;
 
@@ -805,8 +811,9 @@ img {
 
 .footer-social-link {
   position: relative;
-
+  box-sizing: border-box;
   display: block;
+  width: 40px;
   height: 40px;
 
   text-align: center;
@@ -819,6 +826,7 @@ img {
   bottom: 0;
   left: 0;
 
+  margin: auto;
   fill: #83b3d3;
 }
 
@@ -1017,6 +1025,7 @@ img {
 
 .breadcrumbs-link {
   display: block;
+  box-sizing: border-box;
   padding: 0 3px;
 
   color: inherit;
@@ -1120,13 +1129,13 @@ img {
   opacity: 0.6;
 }
 
-.control-mark:focus {
+.control-input:focus + .control-mark {
   opacity: 0.6;
 
   outline: 3px solid #83b3d3;
 }
 
-.control-mark:active {
+.control-input:active + .control-mark {
   opacity: 0.3;
 }
 
