@@ -637,7 +637,7 @@ img {
   font-size: 20px;
   line-height: 26px;
 
-  padding-bottom: 14px;
+  padding-bottom: 18px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   border-top-right-radius: 10px;
@@ -645,11 +645,11 @@ img {
 }
 
 .inner-page .button-newsletter-email {
-  padding-top: 14px;
+  padding-top: 17px;
 }
 
 .inner-page .newsletter {
-  margin-bottom: 48px;
+  margin-bottom: 47px;
 }
 
 .footer-wrapper {
@@ -729,7 +729,7 @@ img {
   width: 720px;
 
   margin-top: 40px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .contacts-address {
@@ -773,10 +773,11 @@ img {
 
 .htmlacademy-link {
   display: block;
+  box-sizing: border-box;
   width: 160px;
   height: 70px;
-  padding: 18px;
 
+  margin-left: -20px;
   text-align: center;
 }
 
